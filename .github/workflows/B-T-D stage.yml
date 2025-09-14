@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Checkout code
-      uses: actions/checkout@v5
-      -name: Build Project
-      run: echo "new push detect on main branch"
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Build Project
+        run: echo "new push detect on main branch"
 
   test:
     runs-on: ubuntu-latest
-    need: build
+    needs: build
     steps:
-      -name: Checkout code
-      uses: actions/checkout@v5
-      -name: Test Project
-      run: echo "running test....."
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Test Project
+        run: echo "running test....."
   
   deploy:
     runs-on: ubuntu-latest
-    need: test
+    needs: test
     steps:
-      -name: Checkout code
-      uses: actions/checkout@v5
-      -name: Deploy Project
-      run: echo "Deploying the Project....."
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Deploy Project
+        run: echo "Deploying the Project....."
