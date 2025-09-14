@@ -10,5 +10,5 @@ jobs:
     runs-on: Ubuntu-latest
 
     steps:
-      -name: Print Message
-      run: echo "new push detect on main branch"
+    -name: Print Message
+    run: echo "new push detect on main branch"
