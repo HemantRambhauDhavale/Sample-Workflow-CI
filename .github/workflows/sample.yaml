@@ -7,8 +7,8 @@ on:
 
 jobs:
   print-message:
-    run-on:Ubuntu-latest
+    run-on: Ubuntu-latest
 
     steps:
       -name: Print Message
-       run: echo "new push detect on main branch"
+       run:echo "new push detect on main branch"
